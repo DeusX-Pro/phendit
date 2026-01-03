@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phendit Disability & Home Care</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        phendit: {
+                            blue: '#0F3D85', // Deep blue from logo/header
+                            light: '#EBF5FF',
+                            accent: '#C7962F', // Gold color from ICAN section
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for things Tailwind can't do easily */
+        .hero-curve {
+            border-bottom-left-radius: 50% 10%;
+            border-bottom-right-radius: 50% 10%;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 font-sans overflow-x-hidden">
+
+    <div class="bg-phendit-blue text-white py-2 text-xs md:text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex gap-4">
+                <span><i class="fas fa-phone-alt mr-2"></i>(02) 1234 5678</span>
+                <span class="hidden sm:inline"><i class="fas fa-envelope mr-2"></i>info@phendit.com.au</span>
+            </div>
+            <div class="flex gap-4">
+                <span class="hidden sm:inline"><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney & Surrounds</span>
+                <a href="#" class="hover:text-phendit-accent transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-phendit-accent transition"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-phendit-blue text-white rounded-full flex items-center justify-center text-xl font-bold">
+                        <i class="fas fa-hands-holding-circle"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <h1 class="text-xl font-extrabold text-phendit-blue tracking-tight">PHENDIT</h1>
+                        <span class="text-xs text-slate-500 font-medium tracking-wider uppercase">Disability & Home Care</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center font-semibold text-sm text-slate-600">
+                    <a href="#" class="text-phendit-blue">Home</a>
+                    <a href="#about" class="hover:text-phendit-blue transition">About</a>
+                    <a href="#services" class="hover:text-phendit-blue transition">Services</a>
+                    <a href="#ican" class="text-phendit-accent font-bold hover:text-yellow-600 transition">ICAN Program</a>
+                    <a href="#contact" class="bg-phendit-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-800 transition shadow-lg transform hover:scale-105">
+                        Enquire Now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button class="text-phendit-blue text-2xl"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-white pt-10 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-yellow-50 rounded-full blur-3xl opacity-50"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-phendit-blue text-xs font-bold tracking-wide mb-4">
+                        PARTNER IN HOPE
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Safe, Person-Centred Support at <span class="text-phendit-blue">Home</span> and in the <span class="text-phendit-blue">Community</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
+                        We provide quality supports aligned with your goals, choice, and control. Partnering with you for independence, dignity, and meaningful living.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-phendit-blue text-white px-8 py-3.5 rounded-full font-bold shadow-xl hover:bg-blue-800 transition transform hover:-translate-y-1">
+                            Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="bg-white border-2 border-slate-200 text-slate-700 px-8 py-3.5 rounded-full font-bold hover:border-phendit-blue hover:text-phendit-blue transition">
+                            Download Welcome Pack
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex gap-4 text-sm text-slate-500 font-medium">
+                        <span class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> NDIS Registered</span>
+                        <span class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> 24/7 Support</span>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="absolute inset-0 bg-phendit-accent rounded-[2rem] transform rotate-3 opacity-20 translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1200&auto=format&fit=crop" 
+                         alt="Carer supporting a smiling man" 
+                         class="relative rounded-[2rem] shadow-2xl w-full object-cover h-[500px] z-10 border-4 border-white">
+                    
+                    <div class="absolute bottom-8 left-8 z-20 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg flex items-center gap-4 max-w-xs animate-bounce" style="animation-duration: 3s;">
+                        <div class="bg-green-100 p-3 rounded-full text-green-600">
+                            <i class="fas fa-heart text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-800">Trusted Care</p>
+                            <p class="text-xs text-slate-500">Rated 5 Stars by families</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-20 bg-phendit-light/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Supporting Your Goals with Compassion</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">We provide a range of disability and home care services tailored to your specific needs.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-blue-50 text-phendit-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Personal Care</h3>
+                        <p class="text-slate-500 text-sm mb-4">Dignified support with daily routines, hygiene, and grooming.</p>
+                        <a href="#" class="text-phendit-blue text-sm font-bold hover:underline">Learn more <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-blue-50 text-phendit-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Community Access</h3>
+                        <p class="text-slate-500 text-sm mb-4">Helping you connect, engage, and build relationships socially.</p>
+                        <a href="#" class="text-phendit-blue text-sm font-bold hover:underline">Learn more <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-12 h-12 bg-blue-50 text-phendit-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Domestic Assistance</h3>
+                        <p class="text-slate-500 text-sm mb-4">Help with household tasks, laundry, and cleaning.</p>
+                        <a href="#" class="text-phendit-blue text-sm font-bold hover:underline">Learn more <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-12 h-12 bg-blue-50 text-phendit-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Respite & STA</h3>
+                        <p class="text-slate-500 text-sm mb-4">Short-term accommodation and relief for carers.</p>
+                        <a href="#" class="text-phendit-blue text-sm font-bold hover:underline">Learn more <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="w-12 h-12 bg-blue-50 text-phendit-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Meal Preparation</h3>
+                        <p class="text-slate-500 text-sm mb-4">Nutritious meal planning and cooking assistance.</p>
+                        <a href="#" class="text-phendit-blue text-sm font-bold hover:underline">Learn more <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition service-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="w-12 h-12 bg-blue-50 text-phendit-blue rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Transport Support</h3>
+                        <p class="text-slate-500 text-sm mb-4">Safe, accessible transport options for daily needs.</p>
+                        <a href="#" class="text-phendit-blue text-sm font-bold hover:underline">Learn more <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-white rounded-3xl p-8 shadow-2xl border-t-8 border-phendit-accent h-full relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-50 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                        
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex items-center gap-3 mb-6">
+                                <i class="fas fa-seedling text-3xl text-phendit-accent"></i>
+                                <h3 class="text-2xl font-bold text-slate-900">ICAN Support Program</h3>
+                            </div>
+                            
+                            <p class="text-slate-600 mb-6 font-medium">
+                                Short-term support when funding gaps shouldn't stop essential care.
+                            </p>
+                            
+                            <ul class="space-y-4 mb-8 text-sm text-slate-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-[8px] text-phendit-accent mt-2 mr-3"></i>
+                                    <span>Ethical gap bridging initiative</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-[8px] text-phendit-accent mt-2 mr-3"></i>
+                                    <span>Safe, regulated delivery</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-[8px] text-phendit-accent mt-2 mr-3"></i>
+                                    <span>Support for reduced funding periods</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-auto">
+                                <a href="#ican" class="block w-full text-center bg-phendit-accent text-white font-bold py-4 rounded-xl shadow-lg hover:bg-yellow-600 transition transform hover:-translate-y-1">
+                                    Check Eligibility <i class="fas fa-chevron-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white py-10 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto text-center px-4" data-aos="fade-in">
+            <h3 class="font-serif italic text-2xl md:text-3xl text-phendit-accent">
+                &mdash; Partner in Hope, Every Need Deserves Impactful Touch &mdash;
+            </h3>
+        </div>
+    </div>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-900">Why Choose Us</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-phendit-blue rounded-full flex items-center justify-center text-2xl mb-4 group-hover:bg-phendit-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">NDIS-aligned & Quality Focused</h4>
+                    <p class="text-sm text-slate-500">We are fully aligned with NDIS standards, ensuring high quality care.</p>
+                </div>
+
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-phendit-blue rounded-full flex items-center justify-center text-2xl mb-4 group-hover:bg-phendit-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Respectful & Culturally Inclusive</h4>
+                    <p class="text-sm text-slate-500">Person-centred care that respects your culture and choices.</p>
+                </div>
+
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-phendit-blue rounded-full flex items-center justify-center text-2xl mb-4 group-hover:bg-phendit-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Trained & Screened Staff</h4>
+                    <p class="text-sm text-slate-500">Qualified, verified, and compassionate care professionals.</p>
+                </div>
+
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-phendit-blue rounded-full flex items-center justify-center text-2xl mb-4 group-hover:bg-phendit-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Transparent Communication</h4>
+                    <p class="text-sm text-slate-500">Clear, honest, and caring communication at every step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ican" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="md:w-1/3" data-aos="fade-right">
+                    <h3 class="text-phendit-accent font-bold tracking-widest uppercase mb-2">Phendit Special Initiative</h3>
+                    <h2 class="text-4xl font-bold mb-6">ICAN Support Program</h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed">
+                        Supporting people when funding gaps shouldn't stop essential care. This is a short-term assistance initiative designed to support individuals experiencing funding gaps, transitions, or urgent support needs within the NDIS system.
+                    </p>
+                    <button class="bg-phendit-accent text-white px-8 py-3 rounded-full font-bold hover:bg-yellow-600 transition">
+                        View Full Eligibility
+                    </button>
+                </div>
+                <div class="md:w-2/3 grid sm:grid-cols-2 gap-4">
+                    <div class="bg-white/10 p-5 rounded-lg border border-white/5 backdrop-blur-sm hover:bg-white/20 transition" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-bold text-phendit-accent mb-2">Running Low on Funds?</h4>
+                        <p class="text-sm text-slate-300">Up to 7–12% discounted hourly rates for participants nearing the end of their plan.</p>
+                    </div>
+                    <div class="bg-white/10 p-5 rounded-lg border border-white/5 backdrop-blur-sm hover:bg-white/20 transition" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="font-bold text-phendit-accent mb-2">Awaiting Plan Approval?</h4>
+                        <p class="text-sm text-slate-300">Discounted private-fee arrangements for those waiting for NDIS access decisions.</p>
+                    </div>
+                    <div class="bg-white/10 p-5 rounded-lg border border-white/5 backdrop-blur-sm hover:bg-white/20 transition" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="font-bold text-phendit-accent mb-2">Carer Burnout / Respite</h4>
+                        <p class="text-sm text-slate-300">Free accommodation and meals for short-term relief (Support hours billed to Core).</p>
+                    </div>
+                    <div class="bg-white/10 p-5 rounded-lg border border-white/5 backdrop-blur-sm hover:bg-white/20 transition" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="font-bold text-phendit-accent mb-2">Emergency Circumstances</h4>
+                        <p class="text-sm text-slate-300">Free short-term support coordination assistance for immediate plan reviews.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-phendit-blue text-white pt-16 pb-8 border-t border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-white text-phendit-blue rounded-full flex items-center justify-center text-xl font-bold">
+                        P
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">PHENDIT</span>
+                </div>
+                <p class="text-blue-200 text-sm leading-relaxed">
+                    Committed to delivering respectful, reliable, and flexible supports tailored to each individual’s goals.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6 text-white border-b border-blue-700 pb-2 inline-block">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-blue-200">
+                    <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#" class="hover:text-white transition">NDIS & Funding</a></li>
+                    <li><a href="#" class="hover:text-white transition">ICAN Program</a></li>
+                    <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6 text-white border-b border-blue-700 pb-2 inline-block">Our Services</h4>
+                <ul class="space-y-3 text-sm text-blue-200">
+                    <li><a href="#" class="hover:text-white transition">Personal Care</a></li>
+                    <li><a href="#" class="hover:text-white transition">Domestic Assistance</a></li>
+                    <li><a href="#" class="hover:text-white transition">Community Access</a></li>
+                    <li><a href="#" class="hover:text-white transition">Respite & STA</a></li>
+                    <li><a href="#" class="hover:text-white transition">Transport Support</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6 text-white border-b border-blue-700 pb-2 inline-block">Contact Us</h4>
+                <ul class="space-y-3 text-sm text-blue-200">
+                    <li class="flex items-start gap-3"><i class="fas fa-phone mt-1"></i> (02) 1234 5678</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-envelope mt-1"></i> referrals@phendit.com.au</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1"></i> Sydney, NSW</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-blue-300">
+            <p>&copy; 2026 Phendit Disability & Home Care. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <span>|</span>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Whether animation should happen only once - while scrolling down
+            offset: 50, // Offset (in px) from the original trigger point
+            duration: 800, // Duration of animation
+            easing: 'ease-out-cubic',
+        });
+    </script>
+</body>
+</html>
