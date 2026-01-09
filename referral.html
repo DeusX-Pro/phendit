@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Referral - Phendit Disability & Home Care</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        phendit: {
+                            dark: '#0B2C67',
+                            primary: '#164E98',
+                            gold: '#C19B52',
+                            light: '#F5F9FF',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link { position: relative; }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -28px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #164E98;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-700 antialiased overflow-x-hidden">
+
+    <div class="bg-phendit-dark text-white text-[11px] sm:text-xs font-medium py-2.5">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span><i class="fas fa-phone-alt mr-2"></i>(02) 456 7890</span>
+                <span class="hidden sm:inline"><i class="fas fa-envelope mr-2"></i>info@phenditdisabilitycare.com.au</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney & Surrounds</span>
+                <a href="#" class="hover:text-phendit-gold"><i class="fab fa-twitter"></i> Charger Hope</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-phendit-primary to-phendit-dark flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fas fa-hands-holding-circle"></i>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <span class="text-phendit-dark font-bold text-xl tracking-wide leading-none">A PHENDIT</span>
+                    <span class="text-phendit-dark text-sm font-light tracking-wide">Disability & Home care Service</span>
+                </div>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600 h-full">
+                <a href="index.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">Home</a>
+                <a href="about.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">About</a>
+                <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">Services</a>
+                <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">NDIS & Funding</a>
+                <a href="ican-program.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">ICAN Program</a>
+                <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">Resources</a>
+            </div>
+
+            <div class="hidden lg:block">
+                <a href="#" class="bg-phendit-dark hover:bg-blue-800 text-white text-sm font-bold py-3 px-8 rounded-full transition shadow-lg flex items-center gap-2">
+                    Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+            </div>
+             <button class="lg:hidden text-2xl text-phendit-dark"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="relative bg-phendit-light py-20">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 text-center relative z-10">
+            <span class="text-phendit-gold font-bold tracking-widest uppercase text-xs mb-3 block" data-aos="fade-down">Join Our Community</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-phendit-dark mb-6" data-aos="fade-up">Referrals & Intake</h1>
+            <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                Whether you are a participant, a family member, or a support coordinator, starting your journey with Phendit is simple. We aim to respond to all referrals within 24 hours.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold text-phendit-dark">Starting Services with Phendit</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8 text-center relative">
+                <div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-blue-100 -z-0 transform translate-y-1/2"></div>
+
+                <div class="relative z-10 bg-white p-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 mx-auto bg-phendit-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">1</div>
+                    <h3 class="font-bold text-phendit-dark mb-2">Submit Referral</h3>
+                    <p class="text-xs text-slate-500">Contact us or use the form below.</p>
+                </div>
+
+                <div class="relative z-10 bg-white p-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-white border-2 border-phendit-primary text-phendit-primary rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-sm">2</div>
+                    <h3 class="font-bold text-phendit-dark mb-2">Discuss Needs</h3>
+                    <p class="text-xs text-slate-500">We discuss your goals and funding.</p>
+                </div>
+
+                <div class="relative z-10 bg-white p-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-white border-2 border-phendit-primary text-phendit-primary rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-sm">3</div>
+                    <h3 class="font-bold text-phendit-dark mb-2">Confirm Plan</h3>
+                    <p class="text-xs text-slate-500">Service agreement & worker matching.</p>
+                </div>
+
+                <div class="relative z-10 bg-white p-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-phendit-gold text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">4</div>
+                    <h3 class="font-bold text-phendit-dark mb-2">Start Services</h3>
+                    <p class="text-xs text-slate-500">Support commences with ongoing review.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-blue-50/50" id="referral-form">
+        <div class="max-w-5xl mx-auto px-4 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden p-4 md:p-8" data-aos="zoom-in">
+                
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-phendit-dark mb-2">Online Referral Form</h2>
+                    <p class="text-sm text-slate-500">Please fill out the details below securely.</p>
+                </div>
+
+                <div class="w-full flex justify-center bg-white">
+                    <iframe 
+                        width="100%" 
+                        height="800px" 
+                        src="https://forms.office.com/Pages/ResponsePage.aspx?id=1H3XvX7Lrkuj5tHSCZ49eFWjwipnYolBn9jw6KrPvZZUNVFCSUdRVzVVVkFZRkpWNDhRTzA0VkxYTC4u&embed=true" 
+                        frameborder="0" 
+                        marginwidth="0" 
+                        marginheight="0" 
+                        style="border: none; max-width:100%; min-height:600px;" 
+                        allowfullscreen 
+                        webkitallowfullscreen 
+                        mozallowfullscreen 
+                        msallowfullscreen> 
+                    </iframe>
+                </div>
+
+                <div class="mt-8 text-center border-t border-slate-100 pt-6">
+                    <p class="text-sm text-slate-500 mb-2">Having trouble with the form?</p>
+                    <p class="font-bold text-phendit-dark">
+                        Call us directly on <a href="tel:024567890" class="text-phendit-primary hover:underline">(02) 456 7890</a> or email <a href="mailto:referrals@phendit.com.au" class="text-phendit-primary hover:underline">referrals@phendit.com.au</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="relative mt-24">
+        
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%] z-10">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[70px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,49.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#C19B52" opacity="0.8"></path>
+                <path d="M0,54.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#FDD77F" opacity="0.6"></path>
+                <path d="M0,60.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" class="fill-phendit-dark"></path>
+            </svg>
+        </div>
+
+        <footer class="bg-phendit-dark text-white pt-12 pb-8 relative z-20">
+            <div class="max-w-7xl mx-auto px-4 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 border-2 border-white/20 rounded-full flex items-center justify-center bg-white/5 backdrop-blur-sm">
+                            <i class="fas fa-hands text-xl text-white"></i>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-xl tracking-wide uppercase font-sans">PHENDIT</span>
+                            <span class="block text-[9px] text-blue-200 tracking-widest uppercase">Disability & Home Care</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-blue-200 leading-relaxed opacity-80">
+                        Programs for support that matters. Enhancing lives through the Respect touch.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
+                        Quick Links
+                    </h4>
+                    <ul class="space-y-3 text-xs text-blue-100/80">
+                        <li><a href="about.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> About Us</a></li>
+                        <li><a href="#" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> Services</a></li>
+                        <li><a href="#" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> NDIS & Funding</a></li>
+                        <li><a href="ican-program.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> ICAN Program</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
+                        Our Services
+                    </h4>
+                    <ul class="space-y-3 text-xs text-blue-100/80">
+                        <li><a href="#" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Premium Care</a></li>
+                        <li><a href="#" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Domestic Assistance</a></li>
+                        <li><a href="#" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Meal Preparation</a></li>
+                        <li><a href="#" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Community Access</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
+                        Contact US
+                    </h4>
+                    <ul class="space-y-4 text-xs text-blue-100/80">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-0.5 text-phendit-gold"></i> 
+                            <span>(02) 456 7890</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i> 
+                            <span>info@phenditdisabilitycare.com.au</span>
+                        </li>
+                        <li class="flex gap-4 mt-6">
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 lg:px-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-blue-300/60">
+                <p>&copy; 2026 Phendit Disability & Home Care. All rights reserved.</p>
+                <div class="flex gap-4 mt-2 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+    </script>
+</body>
+</html>
