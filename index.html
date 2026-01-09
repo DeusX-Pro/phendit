@@ -23,6 +23,8 @@
                     },
                     colors: {
                       'phendit-dark': '#1e3a8a',
+                      'phendit-primary': '#3b82f6',
+                        'phendit-gold': '#d4af37',
                         phendit: {
                             dark: '#0B2C67',    // The deep blue from the header
                             primary: '#164E98', // Brighter blue for buttons
@@ -38,18 +40,61 @@
         }
     </script>
     <style>
-        /* Specific tweaks to match the design images exactly */
-        .nav-link {
-            position: relative;
+        /* Styling for the Navigation Links */
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* The Blue Line (Initially hidden/width 0) */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Adjusted to sit right on the border line */
+    left: 0;
+    width: 0%; /* Start at 0 width */
+    height: 3px;
+    background-color: #164E98; /* Phendit Primary Blue */
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Show line on Hover OR Active class */
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
         }
-        .nav-link.active::after {
-            content: '';
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        .sparkle {
             position: absolute;
-            bottom: -28px; /* Pushes the line to the bottom of the nav container */
-            left: 0;
-            width: 100%;
+            width: 3px;
             height: 3px;
-            background-color: #164E98;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 4px rgba(255,255,255,0.8);
+            animation: sparkle 3s infinite;
+        }
+        .glitter {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
         }
     </style>
 </head>
@@ -87,9 +132,7 @@
                 <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">Home</a>
                 <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">About</a>
                 <a href="#" class="nav-link active text-phendit-dark font-bold h-full flex items-center">Services</a>
-                <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">NDIS & Funding</a>
                 <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">ICAN Program</a>
-                <a href="#" class="nav-link hover:text-phendit-primary transition h-full flex items-center">Resources</a>
             </div>
 
             <div class="hidden lg:block">
@@ -104,7 +147,7 @@
         </div>
     </nav>
 
-   <section class="relative bg-gradient-to-r from-blue-50 to-white pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+  <section class="relative bg-gradient-to-r from-blue-50 to-white pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 
@@ -125,7 +168,7 @@
                     </div>
                 </div>
 
-                <div class="relative" data-aos="fade-left">
+                <div class="relative -mr-4 lg:-mr-8" data-aos="fade-left">
                     <div class="relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1200&auto=format&fit=crop" 
                              alt="Caregiver smiling with patient" 
@@ -249,7 +292,7 @@
 
    
 
-   <section class="py-20 bg-blue-50/30">
+ <section class="py-20 bg-blue-50/30">
         <div class="max-w-7xl mx-auto px-4 lg:px-8">
             
             <div class="text-center mb-12" data-aos="fade-up">
@@ -263,13 +306,16 @@
                 <h2 class="text-3xl lg:text-4xl font-bold text-phendit-dark">How We Help You</h2>
             </div>
 
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row relative" data-aos="fade-up">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden relative" data-aos="fade-up">
                 
-                <div class="p-8 lg:p-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:w-3/4 z-10 relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8 lg:p-12 lg:pr-[45%] relative z-10">
                     
-                    <div class="flex flex-col items-start group">
-                        <div class="w-14 h-14 rounded-full bg-blue-50 text-phendit-primary font-bold text-xl flex items-center justify-center mb-4 group-hover:bg-phendit-primary group-hover:text-white transition">
-                            1
+                    <div class="flex flex-col items-start group relative">
+                        <div class="flex items-center mb-4 w-full">
+                            <div class="w-14 h-14 rounded-full bg-blue-100 text-phendit-primary font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:bg-phendit-primary group-hover:text-white transition">
+                                1
+                            </div>
+                            <div class="hidden lg:block flex-grow h-[2px] bg-blue-200 ml-3"></div>
                         </div>
                         <h4 class="font-bold text-phendit-dark text-lg mb-2">Enquire / Referral</h4>
                         <p class="text-xs text-slate-500 mb-3 leading-relaxed">
@@ -278,9 +324,12 @@
                         <a href="#" class="text-phendit-primary text-xs font-bold hover:underline">Learn more ></a>
                     </div>
 
-                    <div class="flex flex-col items-start group">
-                        <div class="w-14 h-14 rounded-full bg-blue-50 text-phendit-primary font-bold text-xl flex items-center justify-center mb-4 group-hover:bg-phendit-primary group-hover:text-white transition">
-                            2
+                    <div class="flex flex-col items-start group relative">
+                        <div class="flex items-center mb-4 w-full">
+                            <div class="w-14 h-14 rounded-full bg-blue-100 text-phendit-primary font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:bg-phendit-primary group-hover:text-white transition">
+                                2
+                            </div>
+                            <div class="hidden lg:block flex-grow h-[2px] bg-blue-200 ml-3"></div>
                         </div>
                         <h4 class="font-bold text-phendit-dark text-lg mb-2">Meet & Plan</h4>
                         <p class="text-xs text-slate-500 mb-3 leading-relaxed">
@@ -289,9 +338,12 @@
                         <a href="#" class="text-phendit-primary text-xs font-bold hover:underline">Learn more ></a>
                     </div>
 
-                    <div class="flex flex-col items-start group">
-                        <div class="w-14 h-14 rounded-full bg-yellow-50 text-phendit-gold font-bold text-xl flex items-center justify-center mb-4 group-hover:bg-phendit-gold group-hover:text-white transition">
-                            3
+                    <div class="flex flex-col items-start group relative">
+                        <div class="flex items-center mb-4 w-full">
+                            <div class="w-14 h-14 rounded-full bg-yellow-50 text-phendit-gold font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:bg-phendit-gold group-hover:text-white transition">
+                                3
+                            </div>
+                            <div class="hidden lg:block flex-grow h-[2px] bg-blue-200 ml-3"></div>
                         </div>
                         <h4 class="font-bold text-phendit-dark text-lg mb-2">Match & Start</h4>
                         <p class="text-xs text-slate-500 mb-3 leading-relaxed">
@@ -300,9 +352,11 @@
                         <a href="#" class="text-phendit-primary text-xs font-bold hover:underline">Learn more ></a>
                     </div>
 
-                    <div class="flex flex-col items-start group">
-                        <div class="w-14 h-14 rounded-full bg-blue-50 text-phendit-primary font-bold text-xl flex items-center justify-center mb-4 group-hover:bg-phendit-primary group-hover:text-white transition">
-                            4
+                    <div class="flex flex-col items-start group relative">
+                        <div class="flex items-center mb-4 w-full">
+                            <div class="w-14 h-14 rounded-full bg-blue-100 text-phendit-primary font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:bg-phendit-primary group-hover:text-white transition">
+                                4
+                            </div>
                         </div>
                         <h4 class="font-bold text-phendit-dark text-lg mb-2">Review & Improve</h4>
                         <p class="text-xs text-slate-500 mb-3 leading-relaxed">
@@ -313,35 +367,26 @@
 
                 </div>
 
-                <div class="lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-1/3 h-64 lg:h-full z-0">
-                    <div class="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-white via-white/40 to-transparent z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Smiling senior man" 
-                         class="w-full h-full object-cover object-center">
+                <!-- Background Image with Gradient Fade -->
+                <div class="absolute right-0 top-0 bottom-0 w-full lg:w-[45%] pointer-events-none hidden lg:block">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/70 via-30% to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                         alt="Caregiver with senior patient" 
+                         class="w-full h-full object-cover object-left">
                 </div>
 
             </div>
         </div>
     </section>
 
-   <div class="relative mt-24">
-        
-        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%] z-10">
-            <svg class="relative block w-[calc(100%+1.3px)] h-[70px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,49.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#C19B52" opacity="0.8"></path>
-                <path d="M0,54.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#FDD77F" opacity="0.6"></path>
-                
-                <path d="M0,60.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" class="fill-phendit-dark"></path>
-            </svg>
-        </div>
-
+    <div class="relative">
         <footer class="bg-phendit-dark text-white pt-12 pb-8 relative z-20">
             <div class="max-w-7xl mx-auto px-4 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
                 
                 <div class="md:col-span-1">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-12 h-12 border-2 border-white/20 rounded-full flex items-center justify-center bg-white/5 backdrop-blur-sm">
-                            <i class="fas fa-hands text-xl text-white"></i>
+                            <i class="fas fa-hands-helping text-xl text-white"></i>
                         </div>
                         <div>
                             <span class="block font-bold text-xl tracking-wide uppercase font-sans">PHENDIT</span>
@@ -408,7 +453,47 @@
                 </div>
             </div>
         </footer>
+        
+        <!-- Gold Wave at Bottom with Sparkles -->
+        <div class="relative overflow-hidden leading-none bg-phendit-dark">
+            <div class="relative">
+                <!-- Sparkles and Glitters -->
+                <div class="sparkle" style="left: 8%; bottom: 35%; animation-delay: 0s;"></div>
+                <div class="sparkle" style="left: 18%; bottom: 50%; animation-delay: 0.7s;"></div>
+                <div class="sparkle" style="left: 32%; bottom: 25%; animation-delay: 1.4s;"></div>
+                <div class="sparkle" style="left: 48%; bottom: 45%; animation-delay: 0.3s;"></div>
+                <div class="sparkle" style="left: 62%; bottom: 30%; animation-delay: 1.8s;"></div>
+                <div class="sparkle" style="left: 75%; bottom: 55%; animation-delay: 0.9s;"></div>
+                <div class="sparkle" style="left: 88%; bottom: 38%; animation-delay: 1.2s;"></div>
+                
+                <div class="glitter" style="left: 12%; bottom: 42%; animation-delay: 0.5s;"></div>
+                <div class="glitter" style="left: 25%; bottom: 28%; animation-delay: 1.1s;"></div>
+                <div class="glitter" style="left: 38%; bottom: 52%; animation-delay: 0.2s;"></div>
+                <div class="glitter" style="left: 52%; bottom: 33%; animation-delay: 1.6s;"></div>
+                <div class="glitter" style="left: 68%; bottom: 48%; animation-delay: 0.8s;"></div>
+                <div class="glitter" style="left: 82%; bottom: 25%; animation-delay: 1.3s;"></div>
+                <div class="glitter" style="left: 95%; bottom: 45%; animation-delay: 0.4s;"></div>
+                
+                <!-- Wave SVG -->
+                <svg class="relative block w-[calc(100%+1.3px)] h-[80px] md:h-[120px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#B8860B;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#DAA520;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="75%" style="stop-color:#DAA520;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Bottom curved wave layers -->
+                    <path d="M0,0 L0,40 C300,70 600,10 900,40 C1050,55 1150,50 1200,45 L1200,0 Z" fill="#C19B52" opacity="0.4"></path>
+                    <path d="M0,0 L0,50 C250,80 550,20 850,50 C1000,65 1100,55 1200,50 L1200,0 Z" fill="url(#goldGradient)" opacity="0.6"></path>
+                    <path d="M0,0 L0,60 C200,90 500,30 800,60 C950,75 1100,65 1200,60 L1200,0 Z" fill="#FDD77F" opacity="0.8"></path>
+                </svg>
+            </div>
+        </div>
     </div>
+    <script src="script.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
