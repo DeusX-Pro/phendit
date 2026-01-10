@@ -56,22 +56,24 @@
         background-color: #164e98;
       }
       
-      /* Hide Formspree branding and elements */
-      iframe[src*="formspree"],
-      a[href*="formspree"],
-      [class*="formspree"],
-      [id*="formspree"] {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        position: absolute !important;
-        left: -9999px !important;
+      /* Success Message Style */
+      #form-status {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-weight: bold;
       }
-      
-      /* Additional hiding for any injected elements */
-      body > div:not([class]):not([id]),
-      body > a:not([class]):not([id]) {
-        display: none !important;
+      .status-success {
+        background-color: #d1fae5;
+        color: #065f46;
+        border: 1px solid #34d399;
+      }
+      .status-error {
+        background-color: #fee2e2;
+        color: #991b1b;
+        border: 1px solid #f87171;
       }
     </style>
   </head>
@@ -85,7 +87,7 @@
         <div class="flex items-center gap-6">
           <span><i class="fas fa-phone-alt mr-2"></i> +61404335972</span>
           <span class="hidden sm:inline"
-            ><i class="fas fa-envelope mr-2"></i>
+            ><i class="fas fa-envelope mr-2"></i> isdesk@phendithdcare.com.au
           </span>
           <span class="hidden sm:inline"
             ><i class="fas fa-envelope mr-2"></i> ican@phendithdcare.com.au
@@ -136,7 +138,7 @@
           >
           <a
             href="services.html"
-            class="nav-link active text-phendit-dark font-bold h-full flex items-center"
+            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
             >Services</a
           >
           <a
@@ -233,6 +235,7 @@
             </h3>
 
             <form
+              id="contact-form"
               action="https://formspree.io/f/mkogowje"
               method="POST"
               class="space-y-6"
@@ -299,11 +302,14 @@
 
               <button
                 type="submit"
+                id="submit-btn"
                 class="w-full bg-phendit-gold hover:bg-yellow-600 text-white font-bold py-4 rounded-lg shadow-lg transition transform hover:-translate-y-1"
               >
                 Send Message
               </button>
             </form>
+            
+            <div id="form-status"></div>
           </div>
 
           <div class="space-y-8" data-aos="fade-left">
@@ -328,7 +334,9 @@
                   <i class="fas fa-envelope"></i>
                 </div>
                 <h4 class="font-bold text-phendit-dark">Email</h4>
-                <p class="text-sm text-slate-600 mt-1">info@phendithdcare.com.au</p>
+                <p class="text-sm text-slate-600 mt-1">
+                  info@phendithdcare.com.au
+                </p>
               </div>
             </div>
 
@@ -584,7 +592,7 @@
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i>
-                <span> </span>
+                <span> isdesk@phendithdcare.com.au </span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i>
@@ -610,7 +618,7 @@
           class="max-w-7xl mx-auto px-4 lg:px-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-blue-300/60"
         >
           <p>
-            &copy; 2026 Phendit Disability & Home Care. All rights reserved.
+            © 2026 Phendit Disability & Home Care. All rights reserved.
           </p>
           <div class="flex gap-4 mt-2 md:mt-0">
             <a href="#" class="hover:text-white transition">Privacy Policy</a>
@@ -629,37 +637,77 @@
         duration: 800,
         easing: "ease-out-cubic",
       });
-      
-      // Hide Formspree branding - runs immediately and watches for changes
-      const hideFormspree = () => {
-        document.querySelectorAll('iframe[src*="formspree"], a[href*="formspree"], [class*="formspree"], [id*="formspree"]').forEach(el => {
-          el.style.display = 'none';
-          el.style.visibility = 'hidden';
-          el.remove();
-        });
-      };
-      
-      // Run immediately
-      hideFormspree();
-      
-      // Watch for dynamically added elements
-      const observer = new MutationObserver(hideFormspree);
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-      
-      // Run on page load as backup
-      window.addEventListener('load', hideFormspree);
-      
-      // Mobile menu toggle
+
+      // --- MOBILE MENU TOGGLE ---
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       
-      if (mobileMenuBtn) {
+      if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
           mobileMenu.classList.toggle('hidden');
+          
+          // Optional: Toggle icon
+          const icon = mobileMenuBtn.querySelector('i');
+          if (mobileMenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          }
         });
+      }
+
+      // --- AJAX FORM SUBMISSION (Fixes Formspree Redirect) ---
+      const form = document.getElementById("contact-form");
+      
+      async function handleSubmit(event) {
+        event.preventDefault();
+        const status = document.getElementById("form-status");
+        const data = new FormData(event.target);
+        
+        // Show loading state
+        const submitBtn = document.getElementById("submit-btn");
+        const originalBtnText = submitBtn.innerText;
+        submitBtn.innerText = "Sending...";
+        submitBtn.disabled = true;
+
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Thanks! Your message has been sent successfully.";
+            status.className = "status-success";
+            status.style.display = "block";
+            form.reset();
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+              } else {
+                status.innerHTML = "Oops! There was a problem submitting your form.";
+              }
+              status.className = "status-error";
+              status.style.display = "block";
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form.";
+          status.className = "status-error";
+          status.style.display = "block";
+        }).finally(() => {
+            // Restore button state
+            submitBtn.innerText = originalBtnText;
+            submitBtn.disabled = false;
+        });
+      }
+      
+      if(form) {
+        form.addEventListener("submit", handleSubmit);
       }
     </script>
   </body>
