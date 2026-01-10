@@ -56,125 +56,59 @@
     </style>
   </head>
   <body class="bg-white text-slate-700 antialiased overflow-x-hidden">
-    <div
-      class="bg-phendit-dark text-white text-[11px] sm:text-xs font-medium py-2.5"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2"
-      >
-        <div class="flex items-center gap-6">
-          <span><i class="fas fa-phone-alt mr-2"></i> +61404335972</span>
-          <span class="hidden sm:inline"
-            ><i class="fas fa-envelope mr-2"></i>
-          </span>
-          <span class="hidden sm:inline"
-            ><i class="fas fa-envelope mr-2"></i> ican@phendithdcare.com.au
-          </span>
+   <div class="bg-phendit-dark text-white text-[11px] sm:text-xs font-medium py-2.5">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span><i class="fas fa-phone-alt mr-2"></i> +61404335972</span>
+                <span class="hidden sm:inline">
+                    <i class="fas fa-envelope mr-2"></i> isdesk@phendithdcare.com.au
+                </span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney & Surrounds</span>
+                <a href="referral.html"><span class="hidden md:inline">Make Referrals</span></a> 
+                <span class="hidden md:inline">Home Services</span>
+                <a href="#" class="hover:text-phendit-gold"><i class="fab fa-twitter"></i> Charger Hope</a>
+            </div>
         </div>
-        <div class="flex items-center gap-6">
-          <span
-            ><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney &
-            Surrounds</span
-          >
-          <a href="referral.html"
-            ><span class="hidden md:inline">Make Referrals</span></a
-          >
-          <span class="hidden md:inline">Home Services</span>
-          <a href="#" class="hover:text-phendit-gold"
-            ><i class="fab fa-twitter"></i> Charger Hope</a
-          >
-        </div>
-      </div>
     </div>
 
     <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
-      <div
-        class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex items-center justify-between"
-      >
-        <div class="flex items-center gap-3">
-          <a href="index.html">
-            <img
-              src="phendith-logo.jpg"
-              alt="Phendit Logo"
-              class="h-12 w-auto object-contain"
-            />
-          </a>
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
+            
+            <div class="flex items-center gap-3">
+              <a href="index.html">
+                <img src="phendith-logo.jpg" alt="Phendit Logo" class="h-12 w-auto object-contain">
+              </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="nav-link hover:text-phendit-primary transition py-2">Home</a>
+                <a href="about.html" class="nav-link hover:text-phendit-primary transition py-2">About</a>
+                <a href="services.html" class="nav-link hover:text-phendit-primary transition py-2">Services</a>
+                <a href="ican-program.html" class="nav-link hover:text-phendit-primary transition py-2">ICAN Program</a>
+            </div>
+
+            <div class="hidden lg:block">
+                <a href="referral.html" class="bg-phendit-dark hover:bg-blue-800 text-white text-sm font-bold py-3 px-8 rounded-full transition shadow-lg flex items-center gap-2">
+                    Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-phendit-dark focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
 
-        <div
-          class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600 h-full"
-        >
-          <a
-            href="index.html"
-            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
-            >About</a
-          >
-          <a
-            href="services.html"
-            class="nav-link active text-phendit-dark font-bold h-full flex items-center"
-            >Services</a
-          >
-          <a
-            href="ican-program.html"
-            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
-            >ICAN Program</a
-          >
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl absolute top-20 left-0 w-full z-40">
+            <div class="flex flex-col p-4 space-y-4 font-medium text-slate-600">
+                <a href="index.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">Home</a>
+                <a href="about.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">About</a>
+                <a href="services.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">Services</a>
+                <a href="ican-program.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">ICAN Program</a>
+                <a href="referral.html" class="bg-phendit-dark text-white text-center py-3 rounded-lg font-bold mt-4">Enquire Now</a>
+            </div>
         </div>
-
-        <div class="hidden lg:block">
-          <a
-            href="contact.html"
-            class="bg-phendit-dark hover:bg-blue-800 text-white text-sm font-bold py-3 px-8 rounded-full transition shadow-lg flex items-center gap-2"
-          >
-            Enquire Now <i class="fas fa-chevron-right text-xs"></i>
-          </a>
-        </div>
-
-        <button
-          id="mobile-menu-btn"
-          class="lg:hidden text-2xl text-phendit-dark focus:outline-none"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <div
-        id="mobile-menu"
-        class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl absolute top-24 left-0 w-full z-40"
-      >
-        <div class="flex flex-col p-4 space-y-4 font-medium text-slate-600">
-          <a
-            href="index.html"
-            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
-            >About</a
-          >
-          <a
-            href="services.html"
-            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
-            >Services</a
-          >
-          <a
-            href="ican-program.html"
-            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
-            >ICAN Program</a
-          >
-          <a
-            href="contact.html"
-            class="bg-phendit-dark text-white text-center py-3 rounded-lg font-bold mt-4"
-            >Enquire Now</a
-          >
-        </div>
-      </div>
     </nav>
 
     <section class="relative bg-phendit-primary py-24">
