@@ -1,357 +1,616 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Phendit Disability & Home Care</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                    },
-                    colors: {
-                        phendit: {
-                            dark: '#0B2C67',
-                            primary: '#164E98',
-                            gold: '#C19B52',
-                            light: '#F5F9FF',
-                        }
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+            colors: {
+              phendit: {
+                dark: "#0B2C67",
+                primary: "#164E98",
+                gold: "#C19B52",
+                light: "#F5F9FF",
+              },
+            },
+            boxShadow: {
+              soft: "0 10px 40px -10px rgba(0,0,0,0.08)",
+            },
+          },
+        },
+      };
     </script>
     <style>
-        .nav-link { position: relative; }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -28px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #164E98;
-        }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -28px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #164e98;
+      }
     </style>
-</head>
-<body class="bg-white text-slate-700 antialiased overflow-x-hidden">
-
-    <div class="bg-phendit-dark text-white text-[11px] sm:text-xs font-medium py-2.5">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-6">
-                <span><i class="fas fa-phone-alt mr-2"></i> +61404335972</span>
-                <span class="hidden sm:inline"><i class="fas fa-envelope mr-2"></i> isdesk@phendithdcare.com.au </span>
-                <span class="hidden sm:inline"><i class="fas fa-envelope mr-2"></i>  ican@phendithdcare.com.au </span>
-            </div>
-            <div class="flex items-center gap-6">
-                <span><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney & Surrounds</span>
-               <a href="referral.html"><span class="hidden md:inline">Make Referrals</span></a> 
-                <span class="hidden md:inline">Home Services</span>
-                <a href="#" class="hover:text-phendit-gold"><i class="fab fa-twitter"></i> Charger Hope</a>
-            </div>
+  </head>
+  <body class="bg-white text-slate-700 antialiased overflow-x-hidden">
+    <div
+      class="bg-phendit-dark text-white text-[11px] sm:text-xs font-medium py-2.5"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2"
+      >
+        <div class="flex items-center gap-6">
+          <span><i class="fas fa-phone-alt mr-2"></i> +61404335972</span>
+          <span class="hidden sm:inline"
+            ><i class="fas fa-envelope mr-2"></i>
+          </span>
+          <span class="hidden sm:inline"
+            ><i class="fas fa-envelope mr-2"></i> ican@phendithdcare.com.au
+          </span>
         </div>
+        <div class="flex items-center gap-6">
+          <span
+            ><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney &
+            Surrounds</span
+          >
+          <a href="referral.html"
+            ><span class="hidden md:inline">Make Referrals</span></a
+          >
+          <span class="hidden md:inline">Home Services</span>
+          <a href="#" class="hover:text-phendit-gold"
+            ><i class="fab fa-twitter"></i> Charger Hope</a
+          >
+        </div>
+      </div>
     </div>
 
     <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex items-center justify-between">
-            
-            <div class="flex items-center gap-3">
-              <a href="index.html">
-                <img src="phendith-logo.jpg" alt="Phendit Logo" class="h-12 w-auto object-contain">
-              </a>
-            </div>
-
-            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600 h-full">
-                <a href="index.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">Home</a>
-                <a href="about.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">About</a>
-                <a href="services.html" class="nav-link active text-phendit-dark font-bold h-full flex items-center">Services</a>
-                <a href="ican-program.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">ICAN Program</a>
-            </div>
-
-            <div class="hidden lg:block">
-                <a href="contact.html" class="bg-phendit-dark hover:bg-blue-800 text-white text-sm font-bold py-3 px-8 rounded-full transition shadow-lg flex items-center gap-2">
-                    Enquire Now <i class="fas fa-chevron-right text-xs"></i>
-                </a>
-            </div>
-
-            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-phendit-dark focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <a href="index.html">
+            <img
+              src="phendith-logo.jpg"
+              alt="Phendit Logo"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl absolute top-24 left-0 w-full z-40">
-            <div class="flex flex-col p-4 space-y-4 font-medium text-slate-600">
-                <a href="index.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">Home</a>
-                <a href="about.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">About</a>
-                <a href="services.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">Services</a>
-                <a href="ican-program.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">ICAN Program</a>
-                <a href="#contact" class="bg-phendit-dark text-white text-center py-3 rounded-lg font-bold mt-4">Enquire Now</a>
-            </div>
+        <div
+          class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600 h-full"
+        >
+          <a
+            href="index.html"
+            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="nav-link active text-phendit-dark font-bold h-full flex items-center"
+            >Services</a
+          >
+          <a
+            href="ican-program.html"
+            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
+            >ICAN Program</a
+          >
         </div>
+
+        <div class="hidden lg:block">
+          <a
+            href="contact.html"
+            class="bg-phendit-dark hover:bg-blue-800 text-white text-sm font-bold py-3 px-8 rounded-full transition shadow-lg flex items-center gap-2"
+          >
+            Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden text-2xl text-phendit-dark focus:outline-none"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl absolute top-24 left-0 w-full z-40"
+      >
+        <div class="flex flex-col p-4 space-y-4 font-medium text-slate-600">
+          <a
+            href="index.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >Services</a
+          >
+          <a
+            href="ican-program.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >ICAN Program</a
+          >
+          <a
+            href="#contact"
+            class="bg-phendit-dark text-white text-center py-3 rounded-lg font-bold mt-4"
+            >Enquire Now</a
+          >
+        </div>
+      </div>
     </nav>
 
     <section class="relative bg-phendit-light py-20">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 text-center relative z-10">
-            <span class="text-phendit-gold font-bold tracking-widest uppercase text-xs mb-3 block" data-aos="fade-down">Get in Touch</span>
-            <h1 class="text-4xl md:text-5xl font-bold text-phendit-dark mb-6" data-aos="fade-up">Contact Us</h1>
-            <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                We are here to answer your questions and help you find the right support.
-            </p>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 text-center relative z-10">
+        <span
+          class="text-phendit-gold font-bold tracking-widest uppercase text-xs mb-3 block"
+          data-aos="fade-down"
+          >Get in Touch</span
+        >
+        <h1
+          class="text-4xl md:text-5xl font-bold text-phendit-dark mb-6"
+          data-aos="fade-up"
+        >
+          Contact Us
+        </h1>
+        <p
+          class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          We are here to answer your questions and help you find the right
+          support.
+        </p>
+      </div>
     </section>
 
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12">
-                
-                <div class="bg-white rounded-2xl shadow-xl p-8 border border-slate-100" data-aos="fade-right">
-                    <h3 class="text-2xl font-bold text-phendit-dark mb-6">Send us a Message</h3>
-                    
-                    <form action="https://formspree.io/f/mkogowje" method="POST" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-2">First Name</label>
-                                <input type="text" name="firstName" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-2">Last Name</label>
-                                <input type="text" name="lastName" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition">
-                            </div>
-                        </div>
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 border border-slate-100"
+            data-aos="fade-right"
+          >
+            <h3 class="text-2xl font-bold text-phendit-dark mb-6">
+              Send us a Message
+            </h3>
 
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
-                            <input type="tel" name="phone" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
-                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-phendit-gold hover:bg-yellow-600 text-white font-bold py-4 rounded-lg shadow-lg transition transform hover:-translate-y-1">
-                            Send Message
-                        </button>
-                    </form>
+            <form
+              action="https://formspree.io/f/mkogowje"
+              method="POST"
+              class="space-y-6"
+            >
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 mb-2"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    name="firstName"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition"
+                  />
                 </div>
-
-                <div class="space-y-8" data-aos="fade-left">
-                    
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 bg-white text-phendit-primary rounded-full flex items-center justify-center shadow-sm mb-3 text-xl">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <h4 class="font-bold text-phendit-dark">Phone</h4>
-                            <p class="text-sm text-slate-600 mt-1">(02) 456 7890</p>
-                        </div>
-                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 bg-white text-phendit-primary rounded-full flex items-center justify-center shadow-sm mb-3 text-xl">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <h4 class="font-bold text-phendit-dark">Email</h4>
-                            <p class="text-sm text-slate-600 mt-1">info@phendit.com.au</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-2 rounded-2xl shadow-lg border border-slate-200 h-80 overflow-hidden">
-                         <iframe
-                            width="100%"
-                            height="100%"
-                            style="border: 0; border-radius: 12px;"
-                            loading="lazy"
-                            allowfullscreen
-                            referrerpolicy="no-referrer-when-downgrade"
-                            src="https://maps.google.com/maps?q=Level+14%2C+3+Parramatta+Square%2C+153+Macquarie+St%2C+Parramatta+NSW+2150&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                          >
-                          </iframe>
-                    </div>
-
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 mb-2"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    name="lastName"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition"
+                  />
                 </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-phendit-primary focus:ring-2 focus:ring-phendit-primary/20 outline-none transition"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-phendit-gold hover:bg-yellow-600 text-white font-bold py-4 rounded-lg shadow-lg transition transform hover:-translate-y-1"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="space-y-8" data-aos="fade-left">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div
+                class="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-white text-phendit-primary rounded-full flex items-center justify-center shadow-sm mb-3 text-xl"
+                >
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <h4 class="font-bold text-phendit-dark">Phone</h4>
+                <p class="text-sm text-slate-600 mt-1">(02) 456 7890</p>
+              </div>
+              <div
+                class="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-white text-phendit-primary rounded-full flex items-center justify-center shadow-sm mb-3 text-xl"
+                >
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h4 class="font-bold text-phendit-dark">Email</h4>
+                <p class="text-sm text-slate-600 mt-1">info@phendit.com.au</p>
+              </div>
             </div>
+
+            <div
+              class="bg-white p-2 rounded-2xl shadow-lg border border-slate-200 h-80 overflow-hidden"
+            >
+              <iframe
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 12px"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=Level+14%2C+3+Parramatta+Square%2C+153+Macquarie+St%2C+Parramatta+NSW+2150&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              >
+              </iframe>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="py-20 bg-phendit-dark text-white">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-phendit-gold font-bold tracking-widest uppercase text-xs mb-2 block">Our Presence</span>
-                <h2 class="text-3xl font-bold">Our Locations</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm">
-                
-                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/20 transition">
-                    <h4 class="text-phendit-gold font-bold text-lg mb-2"><i class="fas fa-map-pin mr-2"></i>Main Office</h4>
-                    <p class="leading-relaxed text-blue-100">Level 14, 3 Parramatta Square,<br>153 Macquarie Parramatta, Australia</p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition">
-                    <h4 class="font-bold text-lg mb-2">Brisbane</h4>
-                    <p class="leading-relaxed text-blue-200">10 Eagle Street, Brisbane.<br>Santos Place, Brisbane.</p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition">
-                    <h4 class="font-bold text-lg mb-2">Perth</h4>
-                    <p class="leading-relaxed text-blue-200">Capital Square Tower 3, Perth.<br>140 St Georges Terrace, Perth.</p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition">
-                    <h4 class="font-bold text-lg mb-2">Adelaide</h4>
-                    <p class="leading-relaxed text-blue-200">91 King William, Adelaide.</p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition">
-                    <h4 class="font-bold text-lg mb-2">Canberra</h4>
-                    <p class="leading-relaxed text-blue-200">Nishi Building, Canberra.<br>The Realm, Canberra.</p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition">
-                    <h4 class="font-bold text-lg mb-2">Melbourne</h4>
-                    <ul class="space-y-1 text-blue-200">
-                        <li>101 Collins Street, Melbourne</li>
-                        <li>28 Freshwater Place, Southbank</li>
-                        <li>140 William Street, Melbourne</li>
-                        <li>Level 19, 263 William Street, Melbourne</li>
-                    </ul>
-                </div>
-
-                 <div class="md:col-span-2 lg:col-span-3 bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition">
-                    <h4 class="font-bold text-lg mb-4">Sydney</h4>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-blue-200">
-                        <ul class="space-y-1">
-                            <li>Tower One Barangaroo, Sydney</li>
-                            <li>Chifley Tower, Sydney</li>
-                            <li>Gateway Circular Quay, Sydney</li>
-                        </ul>
-                        <ul class="space-y-1">
-                            <li>25 Martin Place, Sydney</li>
-                            <li>Market Street, Sydney</li>
-                            <li>100 Mount Street, North Sydney</li>
-                        </ul>
-                        <ul class="space-y-1">
-                            <li>Westfield Tower 2, Bondi Junction</li>
-                            <li>Parramatta Square, Parramatta</li>
-                            <li>Avaya House, Macquarie Park</li>
-                            <li>Nexus Norwest, Norwest.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-12">
+          <span
+            class="text-phendit-gold font-bold tracking-widest uppercase text-xs mb-2 block"
+            >Our Presence</span
+          >
+          <h2 class="text-3xl font-bold">Our Locations</h2>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm">
+          <div
+            class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/20 transition"
+          >
+            <h4 class="text-phendit-gold font-bold text-lg mb-2">
+              <i class="fas fa-map-pin mr-2"></i>Main Office
+            </h4>
+            <p class="leading-relaxed text-blue-100">
+              Level 14, 3 Parramatta Square,<br />153 Macquarie Parramatta,
+              Australia
+            </p>
+          </div>
+
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition"
+          >
+            <h4 class="font-bold text-lg mb-2">Brisbane</h4>
+            <p class="leading-relaxed text-blue-200">
+              10 Eagle Street, Brisbane.<br />Santos Place, Brisbane.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition"
+          >
+            <h4 class="font-bold text-lg mb-2">Perth</h4>
+            <p class="leading-relaxed text-blue-200">
+              Capital Square Tower 3, Perth.<br />140 St Georges Terrace, Perth.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition"
+          >
+            <h4 class="font-bold text-lg mb-2">Adelaide</h4>
+            <p class="leading-relaxed text-blue-200">
+              91 King William, Adelaide.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition"
+          >
+            <h4 class="font-bold text-lg mb-2">Canberra</h4>
+            <p class="leading-relaxed text-blue-200">
+              Nishi Building, Canberra.<br />The Realm, Canberra.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition"
+          >
+            <h4 class="font-bold text-lg mb-2">Melbourne</h4>
+            <ul class="space-y-1 text-blue-200">
+              <li>101 Collins Street, Melbourne</li>
+              <li>28 Freshwater Place, Southbank</li>
+              <li>140 William Street, Melbourne</li>
+              <li>Level 19, 263 William Street, Melbourne</li>
+            </ul>
+          </div>
+
+          <div
+            class="md:col-span-2 lg:col-span-3 bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition"
+          >
+            <h4 class="font-bold text-lg mb-4">Sydney</h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-blue-200">
+              <ul class="space-y-1">
+                <li>Tower One Barangaroo, Sydney</li>
+                <li>Chifley Tower, Sydney</li>
+                <li>Gateway Circular Quay, Sydney</li>
+              </ul>
+              <ul class="space-y-1">
+                <li>25 Martin Place, Sydney</li>
+                <li>Market Street, Sydney</li>
+                <li>100 Mount Street, North Sydney</li>
+              </ul>
+              <ul class="space-y-1">
+                <li>Westfield Tower 2, Bondi Junction</li>
+                <li>Parramatta Square, Parramatta</li>
+                <li>Avaya House, Macquarie Park</li>
+                <li>Nexus Norwest, Norwest.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-   <div class="relative mt-24">
-        
-        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%] z-10">
-            <svg class="relative block w-[calc(100%+1.3px)] h-[70px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,49.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#C19B52" opacity="0.8"></path>
-                <path d="M0,54.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#FDD77F" opacity="0.6"></path>
-                <path d="M0,60.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" class="fill-phendit-dark"></path>
-            </svg>
+    <div class="relative mt-24">
+      <div
+        class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%] z-10"
+      >
+        <svg
+          class="relative block w-[calc(100%+1.3px)] h-[70px] md:h-[100px]"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,49.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z"
+            fill="#C19B52"
+            opacity="0.8"
+          ></path>
+          <path
+            d="M0,54.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z"
+            fill="#FDD77F"
+            opacity="0.6"
+          ></path>
+          <path
+            d="M0,60.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z"
+            class="fill-phendit-dark"
+          ></path>
+        </svg>
+      </div>
+
+      <footer class="bg-phendit-dark text-white pt-12 pb-8 relative z-20">
+        <div
+          class="max-w-7xl mx-auto px-4 lg:px-8 grid md:grid-cols-4 gap-12 mb-12"
+        >
+          <div class="md:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <img
+                src="phendith-logo.jpg"
+                alt="Phendit Logo"
+                class="h-14 w-auto object-contain bg-white rounded p-1"
+              />
+            </div>
+            <p class="text-xs text-blue-200 leading-relaxed opacity-80">
+              Programs for support that matters. Enhancing lives through the
+              Respect touch.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3 text-xs text-blue-100/80">
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-angle-right text-[10px] opacity-50"></i>
+                  About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-angle-right text-[10px] opacity-50"></i>
+                  Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ican-program.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-angle-right text-[10px] opacity-50"></i>
+                  ICAN Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold"
+            >
+              Our Services
+            </h4>
+            <ul class="space-y-3 text-xs text-blue-100/80">
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i> Premium
+                  Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i> Domestic
+                  Assistance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i> Meal
+                  Preparation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i>
+                  Community Access</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold"
+            >
+              Contact US
+            </h4>
+            <ul class="space-y-4 text-xs text-blue-100/80">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-phone mt-0.5 text-phendit-gold"></i>
+                <span> +61404335972</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i>
+                <span> </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i>
+                <span> ican@phendithdcare.com.au </span>
+              </li>
+              <li class="flex gap-4 mt-6">
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <footer class="bg-phendit-dark text-white pt-12 pb-8 relative z-20">
-            <div class="max-w-7xl mx-auto px-4 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
-                
-                <div class="md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="phendith-logo.jpg" alt="Phendit Logo" class="h-14 w-auto object-contain bg-white rounded p-1">
-                     
-                    </div>
-                    <p class="text-xs text-blue-200 leading-relaxed opacity-80">
-                        Programs for support that matters. Enhancing lives through the Respect touch.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
-                        Quick Links
-                    </h4>
-                    <ul class="space-y-3 text-xs text-blue-100/80">
-                        <li><a href="about.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> About Us</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> Services</a></li>
-                        <li><a href="ican-program.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> ICAN Program</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
-                        Our Services
-                    </h4>
-                    <ul class="space-y-3 text-xs text-blue-100/80">
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Premium Care</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Domestic Assistance</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Meal Preparation</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Community Access</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
-                        Contact US
-                    </h4>
-                    <ul class="space-y-4 text-xs text-blue-100/80">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-phone mt-0.5 text-phendit-gold"></i> 
-                            <span> +61404335972</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i> 
-                            <span> isdesk@phendithdcare.com.au </span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i> 
-                            <span>  ican@phendithdcare.com.au </span>
-                        </li>
-                        <li class="flex gap-4 mt-6">
-                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="max-w-7xl mx-auto px-4 lg:px-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-blue-300/60">
-                <p>&copy; 2026 Phendit Disability & Home Care. All rights reserved.</p>
-                <div class="flex gap-4 mt-2 md:mt-0">
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
-                </div>
-            </div>
-        </footer>
+        <div
+          class="max-w-7xl mx-auto px-4 lg:px-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-blue-300/60"
+        >
+          <p>
+            &copy; 2026 Phendit Disability & Home Care. All rights reserved.
+          </p>
+          <div class="flex gap-4 mt-2 md:mt-0">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800,
-            easing: 'ease-out-cubic',
-        });
+      AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: "ease-out-cubic",
+      });
     </script>
-</body>
+  </body>
 </html>

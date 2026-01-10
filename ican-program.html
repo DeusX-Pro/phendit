@@ -1,406 +1,715 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ICAN Support Program - Phendit Disability & Home Care</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                    },
-                    colors: {
-                        phendit: {
-                            dark: '#0B2C67',
-                            primary: '#164E98',
-                            gold: '#C19B52',
-                            light: '#F5F9FF',
-                        }
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+            colors: {
+              phendit: {
+                dark: "#0B2C67",
+                primary: "#164E98",
+                gold: "#C19B52",
+                light: "#F5F9FF",
+              },
+            },
+            boxShadow: {
+              soft: "0 10px 40px -10px rgba(0,0,0,0.08)",
+            },
+          },
+        },
+      };
     </script>
     <style>
-        .nav-link { position: relative; }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -28px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #164E98;
-        }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -28px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #164e98;
+      }
     </style>
-</head>
-<body class="bg-white text-slate-700 antialiased overflow-x-hidden">
-
-    <div class="bg-phendit-dark text-white text-[11px] sm:text-xs font-medium py-2.5">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-6">
-                <span><i class="fas fa-phone-alt mr-2"></i> +61404335972</span>
-                <span class="hidden sm:inline"><i class="fas fa-envelope mr-2"></i> isdesk@phendithdcare.com.au </span>
-                <span class="hidden sm:inline"><i class="fas fa-envelope mr-2"></i>  ican@phendithdcare.com.au </span>
-            </div>
-            <div class="flex items-center gap-6">
-                <span><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney & Surrounds</span>
-               <a href="referral.html"><span class="hidden md:inline">Make Referrals</span></a> 
-                <span class="hidden md:inline">Home Services</span>
-                <a href="#" class="hover:text-phendit-gold"><i class="fab fa-twitter"></i> Charger Hope</a>
-            </div>
+  </head>
+  <body class="bg-white text-slate-700 antialiased overflow-x-hidden">
+    <div
+      class="bg-phendit-dark text-white text-[11px] sm:text-xs font-medium py-2.5"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2"
+      >
+        <div class="flex items-center gap-6">
+          <span><i class="fas fa-phone-alt mr-2"></i> +61404335972</span>
+          <span class="hidden sm:inline"
+            ><i class="fas fa-envelope mr-2"></i>
+          </span>
+          <span class="hidden sm:inline"
+            ><i class="fas fa-envelope mr-2"></i> ican@phendithdcare.com.au
+          </span>
         </div>
+        <div class="flex items-center gap-6">
+          <span
+            ><i class="fas fa-map-marker-alt mr-2"></i>Servicing Sydney &
+            Surrounds</span
+          >
+          <a href="referral.html"
+            ><span class="hidden md:inline">Make Referrals</span></a
+          >
+          <span class="hidden md:inline">Home Services</span>
+          <a href="#" class="hover:text-phendit-gold"
+            ><i class="fab fa-twitter"></i> Charger Hope</a
+          >
+        </div>
+      </div>
     </div>
 
     <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex items-center justify-between">
-            
-            <div class="flex items-center gap-3">
-              <a href="index.html">
-                <img src="phendith-logo.jpg" alt="Phendit Logo" class="h-12 w-auto object-contain">
-              </a>
-            </div>
-
-            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600 h-full">
-                <a href="index.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">Home</a>
-                <a href="about.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">About</a>
-                <a href="services.html" class="nav-link active text-phendit-dark font-bold h-full flex items-center">Services</a>
-                <a href="ican-program.html" class="nav-link hover:text-phendit-primary transition h-full flex items-center">ICAN Program</a>
-            </div>
-
-            <div class="hidden lg:block">
-                <a href="contact.html" class="bg-phendit-dark hover:bg-blue-800 text-white text-sm font-bold py-3 px-8 rounded-full transition shadow-lg flex items-center gap-2">
-                    Enquire Now <i class="fas fa-chevron-right text-xs"></i>
-                </a>
-            </div>
-
-            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-phendit-dark focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <a href="index.html">
+            <img
+              src="phendith-logo.jpg"
+              alt="Phendit Logo"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl absolute top-24 left-0 w-full z-40">
-            <div class="flex flex-col p-4 space-y-4 font-medium text-slate-600">
-                <a href="index.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">Home</a>
-                <a href="about.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">About</a>
-                <a href="services.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">Services</a>
-                <a href="ican-program.html" class="hover:text-phendit-primary block py-2 border-b border-gray-50">ICAN Program</a>
-                <a href="#contact" class="bg-phendit-dark text-white text-center py-3 rounded-lg font-bold mt-4">Enquire Now</a>
-            </div>
+        <div
+          class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600 h-full"
+        >
+          <a
+            href="index.html"
+            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="nav-link active text-phendit-dark font-bold h-full flex items-center"
+            >Services</a
+          >
+          <a
+            href="ican-program.html"
+            class="nav-link hover:text-phendit-primary transition h-full flex items-center"
+            >ICAN Program</a
+          >
         </div>
+
+        <div class="hidden lg:block">
+          <a
+            href="contact.html"
+            class="bg-phendit-dark hover:bg-blue-800 text-white text-sm font-bold py-3 px-8 rounded-full transition shadow-lg flex items-center gap-2"
+          >
+            Enquire Now <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden text-2xl text-phendit-dark focus:outline-none"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl absolute top-24 left-0 w-full z-40"
+      >
+        <div class="flex flex-col p-4 space-y-4 font-medium text-slate-600">
+          <a
+            href="index.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >Services</a
+          >
+          <a
+            href="ican-program.html"
+            class="hover:text-phendit-primary block py-2 border-b border-gray-50"
+            >ICAN Program</a
+          >
+          <a
+            href="#contact"
+            class="bg-phendit-dark text-white text-center py-3 rounded-lg font-bold mt-4"
+            >Enquire Now</a
+          >
+        </div>
+      </div>
     </nav>
 
     <section class="relative bg-blue-50/50 pt-16 pb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                
-                <div data-aos="fade-right">
-                    <div class="text-sm text-slate-500 mb-4 font-medium flex gap-2">
-                        <a href="index.html">Home</a> <span>></span> <span class="text-phendit-primary">ICAN Program</span>
-                    </div>
-                    <h1 class="text-4xl md:text-5xl font-bold text-phendit-dark leading-tight mb-6">
-                        ICAN Support Program
-                    </h1>
-                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                        Ethical short-term support bridging the gap when funding delays or changes shouldn't stop essential care.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-4 items-center">
-                        <a href="#" class="bg-phendit-gold hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">
-                            Check ICAN Eligibility >
-                        </a>
-                        <div class="flex items-center gap-2 text-phendit-dark font-bold">
-                            <i class="fas fa-phone-alt"></i> Call: (02) 456-7890
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative" data-aos="fade-left">
-                    <div class="rounded-tl-[60px] rounded-br-[60px] overflow-hidden shadow-2xl border-4 border-white">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop" 
-                             alt="Smiling carer with senior lady" 
-                             class="w-full h-auto object-cover">
-                    </div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <div class="text-sm text-slate-500 mb-4 font-medium flex gap-2">
+              <a href="index.html">Home</a> <span>></span>
+              <span class="text-phendit-primary">ICAN Program</span>
             </div>
+            <h1
+              class="text-4xl md:text-5xl font-bold text-phendit-dark leading-tight mb-6"
+            >
+              ICAN Support Program
+            </h1>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+              Ethical short-term support bridging the gap when funding delays or
+              changes shouldn't stop essential care.
+            </p>
+
+            <div class="flex flex-wrap gap-4 items-center">
+              <a
+                href="#"
+                class="bg-phendit-gold hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition"
+              >
+                Check ICAN Eligibility >
+              </a>
+              <div class="flex items-center gap-2 text-phendit-dark font-bold">
+                <i class="fas fa-phone-alt"></i> Call: (02) 456-7890
+              </div>
+            </div>
+          </div>
+
+          <div class="relative" data-aos="fade-left">
+            <div
+              class="rounded-tl-[60px] rounded-br-[60px] overflow-hidden shadow-2xl border-4 border-white"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop"
+                alt="Smiling carer with senior lady"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8">
-            <div class="grid lg:grid-cols-3 gap-12">
-                
-                <div class="lg:col-span-2" data-aos="fade-up">
-                    <div class="flex items-start gap-4 mb-6">
-                        <i class="fas fa-lightbulb text-4xl text-phendit-gold mt-1"></i>
-                        <h2 class="text-3xl font-bold text-phendit-dark">Purpose of the ICAN Support Program</h2>
-                    </div>
-                    
-                    <ul class="space-y-4 text-slate-600 mb-8 ml-14">
-                        <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-phendit-gold rounded-full mt-2 shrink-0"></span>
-                            <span>Short-term care when NDIS funding is temporarily insufficient or delayed.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-phendit-gold rounded-full mt-2 shrink-0"></span>
-                            <span>Essential Support to maintain health, safety, and wellbeing.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-phendit-gold rounded-full mt-2 shrink-0"></span>
-                            <span>Ethical solution with strong safeguarding and regulatory compliance.</span>
-                        </li>
-                    </ul>
-
-                    <div class="bg-blue-50/50 border-l-4 border-phendit-primary p-6 rounded-r-lg ml-14">
-                        <p class="text-phendit-dark font-medium italic">
-                            ICAN stands for <strong>Inclusive Care & Access Network</strong> — because every need deserves impactful touch.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-1" data-aos="fade-left">
-                    <div class="bg-white border border-blue-100 rounded-3xl shadow-xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-50 rounded-full -mr-16 -mt-16 z-0"></div>
-                        
-                        <div class="relative z-10">
-                            <div class="flex items-center gap-3 mb-4">
-                                <i class="far fa-question-circle text-2xl text-phendit-gold"></i>
-                                <h3 class="font-bold text-lg text-phendit-dark">ICAN Support <br>Right for Me?</h3>
-                            </div>
-                            <p class="text-sm text-slate-500 mb-6 leading-relaxed">
-                                For individuals already in the NDIS, losing support shortfalls, and needing short-term assistance — ICAN may be of benefit.
-                            </p>
-                            <button class="w-full bg-phendit-gold hover:bg-yellow-600 text-white font-bold py-3 rounded-xl shadow-md transition">
-                                Check ICAN Eligibility >
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <i class="fas fa-lightbulb text-4xl text-phendit-gold mt-1"></i>
+              <h2 class="text-3xl font-bold text-phendit-dark">
+                Purpose of the ICAN Support Program
+              </h2>
             </div>
+
+            <ul class="space-y-4 text-slate-600 mb-8 ml-14">
+              <li class="flex items-start gap-3">
+                <span
+                  class="w-1.5 h-1.5 bg-phendit-gold rounded-full mt-2 shrink-0"
+                ></span>
+                <span
+                  >Short-term care when NDIS funding is temporarily insufficient
+                  or delayed.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="w-1.5 h-1.5 bg-phendit-gold rounded-full mt-2 shrink-0"
+                ></span>
+                <span
+                  >Essential Support to maintain health, safety, and
+                  wellbeing.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="w-1.5 h-1.5 bg-phendit-gold rounded-full mt-2 shrink-0"
+                ></span>
+                <span
+                  >Ethical solution with strong safeguarding and regulatory
+                  compliance.</span
+                >
+              </li>
+            </ul>
+
+            <div
+              class="bg-blue-50/50 border-l-4 border-phendit-primary p-6 rounded-r-lg ml-14"
+            >
+              <p class="text-phendit-dark font-medium italic">
+                ICAN stands for
+                <strong>Inclusive Care & Access Network</strong> — because every
+                need deserves impactful touch.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-1" data-aos="fade-left">
+            <div
+              class="bg-white border border-blue-100 rounded-3xl shadow-xl p-8 relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-yellow-50 rounded-full -mr-16 -mt-16 z-0"
+              ></div>
+
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                  <i
+                    class="far fa-question-circle text-2xl text-phendit-gold"
+                  ></i>
+                  <h3 class="font-bold text-lg text-phendit-dark">
+                    ICAN Support <br />Right for Me?
+                  </h3>
+                </div>
+                <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                  For individuals already in the NDIS, losing support
+                  shortfalls, and needing short-term assistance — ICAN may be of
+                  benefit.
+                </p>
+                <button
+                  class="w-full bg-phendit-gold hover:bg-yellow-600 text-white font-bold py-3 rounded-xl shadow-md transition"
+                >
+                  Check ICAN Eligibility >
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="py-20 bg-phendit-light">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8">
-            <div class="mb-12" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-phendit-dark mb-4">Eligibility Criteria for ICAN Support</h2>
-                <p class="text-slate-600 max-w-3xl">
-                    ICAN eligibility is carefully limited to the following scenarios to ensure it is ethical, needs-based, and aligned with regulatory requirements.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition">
-                        <i class="fas fa-hourglass-start"></i>
-                    </div>
-                    <h4 class="font-bold text-phendit-dark mb-2">Funding Delay</h4>
-                    <p class="text-xs text-slate-500 mb-4">Your NDIS plan approval is significantly delayed or pending review.</p>
-                    <a href="#" class="text-phendit-primary text-xs font-bold">Learn more ></a>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition">
-                        <i class="fas fa-calendar-times"></i>
-                    </div>
-                    <h4 class="font-bold text-phendit-dark mb-2">Funding Gap</h4>
-                    <p class="text-xs text-slate-500 mb-4">You are experiencing a temporary pause in existing funding.</p>
-                    <a href="#" class="text-phendit-primary text-xs font-bold">Learn more ></a>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition">
-                        <i class="fas fa-walking"></i>
-                    </div>
-                    <h4 class="font-bold text-phendit-dark mb-2">Transition Period</h4>
-                    <p class="text-xs text-slate-500 mb-4">You are new to the NDIS and in the onboarding phase.</p>
-                    <a href="#" class="text-phendit-primary text-xs font-bold">Learn more ></a>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition">
-                        <i class="fas fa-exclamation-circle"></i>
-                    </div>
-                    <h4 class="font-bold text-phendit-dark mb-2">Unexpected Need</h4>
-                    <p class="text-xs text-slate-500 mb-4">You have an unexpected situation requiring immediate support.</p>
-                    <a href="#" class="text-phendit-primary text-xs font-bold">Learn more ></a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-phendit-dark mb-4">
+            Eligibility Criteria for ICAN Support
+          </h2>
+          <p class="text-slate-600 max-w-3xl">
+            ICAN eligibility is carefully limited to the following scenarios to
+            ensure it is ethical, needs-based, and aligned with regulatory
+            requirements.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div
+              class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition"
+            >
+              <i class="fas fa-hourglass-start"></i>
+            </div>
+            <h4 class="font-bold text-phendit-dark mb-2">Funding Delay</h4>
+            <p class="text-xs text-slate-500 mb-4">
+              Your NDIS plan approval is significantly delayed or pending
+              review.
+            </p>
+            <a href="#" class="text-phendit-primary text-xs font-bold"
+              >Learn more ></a
+            >
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition"
+            >
+              <i class="fas fa-calendar-times"></i>
+            </div>
+            <h4 class="font-bold text-phendit-dark mb-2">Funding Gap</h4>
+            <p class="text-xs text-slate-500 mb-4">
+              You are experiencing a temporary pause in existing funding.
+            </p>
+            <a href="#" class="text-phendit-primary text-xs font-bold"
+              >Learn more ></a
+            >
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition"
+            >
+              <i class="fas fa-walking"></i>
+            </div>
+            <h4 class="font-bold text-phendit-dark mb-2">Transition Period</h4>
+            <p class="text-xs text-slate-500 mb-4">
+              You are new to the NDIS and in the onboarding phase.
+            </p>
+            <a href="#" class="text-phendit-primary text-xs font-bold"
+              >Learn more ></a
+            >
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-12 h-12 mx-auto bg-blue-50 text-phendit-primary rounded-full flex items-center justify-center text-xl mb-4 group-hover:bg-phendit-primary group-hover:text-white transition"
+            >
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h4 class="font-bold text-phendit-dark mb-2">Unexpected Need</h4>
+            <p class="text-xs text-slate-500 mb-4">
+              You have an unexpected situation requiring immediate support.
+            </p>
+            <a href="#" class="text-phendit-primary text-xs font-bold"
+              >Learn more ></a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="py-20 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 class="text-3xl font-bold text-phendit-dark mb-12">How ICAN Maintains Integrity and Trust</h2>
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <h2 class="text-3xl font-bold text-phendit-dark mb-12">
+          How ICAN Maintains Integrity and Trust
+        </h2>
 
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                
-                <div class="grid gap-6">
-                    <div class="bg-blue-50 p-6 rounded-xl flex items-start gap-4" data-aos="fade-right">
-                        <span class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0">1</span>
-                        <div>
-                            <h4 class="font-bold text-phendit-dark mb-1">Strict Safeguarding Process</h4>
-                            <p class="text-xs text-slate-600">All ICAN supports are delivered under the same rigorous safeguarding standards as NDIS services.</p>
-                        </div>
-                    </div>
-                    <div class="bg-blue-50 p-6 rounded-xl flex items-start gap-4" data-aos="fade-right" data-aos-delay="100">
-                        <span class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0">2</span>
-                        <div>
-                            <h4 class="font-bold text-phendit-dark mb-1">Regulated Decisions</h4>
-                            <p class="text-xs text-slate-600">Each application is assessed to ensure credit, compliance, and eligibility by trained teams.</p>
-                        </div>
-                    </div>
-                    <div class="bg-blue-50 p-6 rounded-xl flex items-start gap-4" data-aos="fade-right" data-aos-delay="200">
-                        <span class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0">3</span>
-                        <div>
-                            <h4 class="font-bold text-phendit-dark mb-1">Eligibility Review</h4>
-                            <p class="text-xs text-slate-600">Our review ensures your needs and ICAN eligibility align carefully.</p>
-                        </div>
-                    </div>
-                    <div class="bg-blue-50 p-6 rounded-xl flex items-start gap-4" data-aos="fade-right" data-aos-delay="300">
-                        <span class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0">4</span>
-                        <div>
-                            <h4 class="font-bold text-phendit-dark mb-1">Short-Term Support</h4>
-                            <p class="text-xs text-slate-600">Our approval works on a short-term basis consistent with wellbeing.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative h-full min-h-[400px]" data-aos="fade-left">
-                    <div class="absolute inset-0 bg-blue-100 rounded-2xl transform rotate-2"></div>
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Team discussion" 
-                         class="relative rounded-2xl shadow-xl w-full h-full object-cover">
-                </div>
-
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="grid gap-6">
+            <div
+              class="bg-blue-50 p-6 rounded-xl flex items-start gap-4"
+              data-aos="fade-right"
+            >
+              <span
+                class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0"
+                >1</span
+              >
+              <div>
+                <h4 class="font-bold text-phendit-dark mb-1">
+                  Strict Safeguarding Process
+                </h4>
+                <p class="text-xs text-slate-600">
+                  All ICAN supports are delivered under the same rigorous
+                  safeguarding standards as NDIS services.
+                </p>
+              </div>
             </div>
+            <div
+              class="bg-blue-50 p-6 rounded-xl flex items-start gap-4"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <span
+                class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0"
+                >2</span
+              >
+              <div>
+                <h4 class="font-bold text-phendit-dark mb-1">
+                  Regulated Decisions
+                </h4>
+                <p class="text-xs text-slate-600">
+                  Each application is assessed to ensure credit, compliance, and
+                  eligibility by trained teams.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-blue-50 p-6 rounded-xl flex items-start gap-4"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <span
+                class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0"
+                >3</span
+              >
+              <div>
+                <h4 class="font-bold text-phendit-dark mb-1">
+                  Eligibility Review
+                </h4>
+                <p class="text-xs text-slate-600">
+                  Our review ensures your needs and ICAN eligibility align
+                  carefully.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-blue-50 p-6 rounded-xl flex items-start gap-4"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
+              <span
+                class="w-8 h-8 bg-phendit-gold/20 text-phendit-dark font-bold rounded flex items-center justify-center shrink-0"
+                >4</span
+              >
+              <div>
+                <h4 class="font-bold text-phendit-dark mb-1">
+                  Short-Term Support
+                </h4>
+                <p class="text-xs text-slate-600">
+                  Our approval works on a short-term basis consistent with
+                  wellbeing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative h-full min-h-[400px]" data-aos="fade-left">
+            <div
+              class="absolute inset-0 bg-blue-100 rounded-2xl transform rotate-2"
+            ></div>
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
+              alt="Team discussion"
+              class="relative rounded-2xl shadow-xl w-full h-full object-cover"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <div class="py-12 bg-white border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold text-phendit-dark mb-6">Have Questions about ICAN?</h3>
-            <div class="flex flex-wrap justify-center gap-4 items-center">
-                <a href="#contact" class="bg-phendit-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-900 transition">
-                    Enquire Now >
-                </a>
-                <a href="#" class="bg-white border border-slate-300 text-slate-600 font-bold py-3 px-8 rounded-full hover:border-phendit-dark transition">
-                    Make a Referral >
-                </a>
-                <div class="ml-4 text-left text-xs text-slate-500">
-                    <p class="font-bold text-phendit-dark">+61 (02) 456-7890</p>
-                    <p>Email: info@phenditdisabilitycare.com.au</p>
-                </div>
-            </div>
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold text-phendit-dark mb-6">
+          Have Questions about ICAN?
+        </h3>
+        <div class="flex flex-wrap justify-center gap-4 items-center">
+          <a
+            href="#contact"
+            class="bg-phendit-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-900 transition"
+          >
+            Enquire Now >
+          </a>
+          <a
+            href="#"
+            class="bg-white border border-slate-300 text-slate-600 font-bold py-3 px-8 rounded-full hover:border-phendit-dark transition"
+          >
+            Make a Referral >
+          </a>
+          <div class="ml-4 text-left text-xs text-slate-500">
+            <p class="font-bold text-phendit-dark">+61 (02) 456-7890</p>
+            <p>Email: info@phenditdisabilitycare.com.au</p>
+          </div>
         </div>
+      </div>
     </div>
 
-   <div class="relative mt-24">
-        
-        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%] z-10">
-            <svg class="relative block w-[calc(100%+1.3px)] h-[70px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,49.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#C19B52" opacity="0.8"></path>
-                <path d="M0,54.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" fill="#FDD77F" opacity="0.6"></path>
-                <path d="M0,60.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z" class="fill-phendit-dark"></path>
-            </svg>
+    <div class="relative mt-24">
+      <div
+        class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%] z-10"
+      >
+        <svg
+          class="relative block w-[calc(100%+1.3px)] h-[70px] md:h-[100px]"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,49.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z"
+            fill="#C19B52"
+            opacity="0.8"
+          ></path>
+          <path
+            d="M0,54.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z"
+            fill="#FDD77F"
+            opacity="0.6"
+          ></path>
+          <path
+            d="M0,60.67c0,0,380.43-80.44,600-32.67s600,32.67,600,32.67V120H0Z"
+            class="fill-phendit-dark"
+          ></path>
+        </svg>
+      </div>
+
+      <footer class="bg-phendit-dark text-white pt-12 pb-8 relative z-20">
+        <div
+          class="max-w-7xl mx-auto px-4 lg:px-8 grid md:grid-cols-4 gap-12 mb-12"
+        >
+          <div class="md:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <img
+                src="phendith-logo.jpg"
+                alt="Phendit Logo"
+                class="h-14 w-auto object-contain bg-white rounded p-1"
+              />
+            </div>
+            <p class="text-xs text-blue-200 leading-relaxed opacity-80">
+              Programs for support that matters. Enhancing lives through the
+              Respect touch.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3 text-xs text-blue-100/80">
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-angle-right text-[10px] opacity-50"></i>
+                  About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-angle-right text-[10px] opacity-50"></i>
+                  Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ican-program.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-angle-right text-[10px] opacity-50"></i>
+                  ICAN Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold"
+            >
+              Our Services
+            </h4>
+            <ul class="space-y-3 text-xs text-blue-100/80">
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i> Premium
+                  Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i> Domestic
+                  Assistance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i> Meal
+                  Preparation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-phendit-gold transition flex items-center gap-2"
+                  ><i class="fas fa-folder text-[10px] opacity-50"></i>
+                  Community Access</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold"
+            >
+              Contact US
+            </h4>
+            <ul class="space-y-4 text-xs text-blue-100/80">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-phone mt-0.5 text-phendit-gold"></i>
+                <span> +61404335972</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i>
+                <span> </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i>
+                <span> ican@phendithdcare.com.au </span>
+              </li>
+              <li class="flex gap-4 mt-6">
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <footer class="bg-phendit-dark text-white pt-12 pb-8 relative z-20">
-            <div class="max-w-7xl mx-auto px-4 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
-                
-                <div class="md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="phendith-logo.jpg" alt="Phendit Logo" class="h-14 w-auto object-contain bg-white rounded p-1">
-                     
-                    </div>
-                    <p class="text-xs text-blue-200 leading-relaxed opacity-80">
-                        Programs for support that matters. Enhancing lives through the Respect touch.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
-                        Quick Links
-                    </h4>
-                    <ul class="space-y-3 text-xs text-blue-100/80">
-                        <li><a href="about.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> About Us</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> Services</a></li>
-                        <li><a href="ican-program.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-angle-right text-[10px] opacity-50"></i> ICAN Program</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
-                        Our Services
-                    </h4>
-                    <ul class="space-y-3 text-xs text-blue-100/80">
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Premium Care</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Domestic Assistance</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Meal Preparation</a></li>
-                        <li><a href="services.html" class="hover:text-phendit-gold transition flex items-center gap-2"><i class="fas fa-folder text-[10px] opacity-50"></i> Community Access</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm mb-6 text-white inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-phendit-gold">
-                        Contact US
-                    </h4>
-                    <ul class="space-y-4 text-xs text-blue-100/80">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-phone mt-0.5 text-phendit-gold"></i> 
-                            <span> +61404335972</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i> 
-                            <span> isdesk@phendithdcare.com.au </span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-envelope mt-0.5 text-phendit-gold"></i> 
-                            <span>  ican@phendithdcare.com.au </span>
-                        </li>
-                        <li class="flex gap-4 mt-6">
-                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-phendit-gold hover:text-phendit-dark transition"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="max-w-7xl mx-auto px-4 lg:px-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-blue-300/60">
-                <p>&copy; 2026 Phendit Disability & Home Care. All rights reserved.</p>
-                <div class="flex gap-4 mt-2 md:mt-0">
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
-                </div>
-            </div>
-        </footer>
+        <div
+          class="max-w-7xl mx-auto px-4 lg:px-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-blue-300/60"
+        >
+          <p>
+            &copy; 2026 Phendit Disability & Home Care. All rights reserved.
+          </p>
+          <div class="flex gap-4 mt-2 md:mt-0">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800,
-            easing: 'ease-out-cubic',
-        });
+      AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: "ease-out-cubic",
+      });
     </script>
-</body>
+  </body>
 </html>
